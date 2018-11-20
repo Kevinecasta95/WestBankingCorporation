@@ -39,7 +39,7 @@
                                 <a class="nav-link" href="{{ route('clientes.index') }}">Clientes</a>
                             </li>
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('cuentas_bancarias.index') }}">Cuentas bancarias</a>
+                                    <a class="nav-link" href="{{ route('cuentas_bancarias.index') }}">Cuentas bancarias </a>
                                 </li>
                         @endauth
                     </ul>
