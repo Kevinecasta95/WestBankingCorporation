@@ -45,6 +45,29 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('transacciones.index') }}">Transacciones </a>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown2" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Operaciones <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
+                                    <a class="dropdown-item" href="#">
+                                        Depósitos
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Cheques
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Retiros
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Remesas
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Transferencias
+                                    </a>
+                                </div>
+                            </li>
                         @endauth
                     </ul>
 
