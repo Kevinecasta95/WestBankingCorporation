@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -40,7 +41,10 @@
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ route('cuentas_bancarias.index') }}">Cuentas bancarias </a>
-                                </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('transacciones.index') }}">Transacciones </a>
+                            </li>
                         @endauth
                     </ul>
 

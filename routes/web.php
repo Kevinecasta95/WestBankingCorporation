@@ -15,5 +15,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('clientes', 'Clientes\\ClientesController');
-Route::resource('cuentas_bancarias', 'CuentasBancarias\\CuentasBancariasController');
+Route::resource('clientes', 'Clientes\\ClientesController')->middleware('auth');
+Route::resource('cuentas_bancarias', 'CuentasBancarias\\CuentasBancariasController')->middleware('auth');
+
+Route::resource('transacciones', 'Transacciones\\TransaccionesController')->middleware('auth');
