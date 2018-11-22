@@ -8,7 +8,15 @@ class Transaccion extends Model
 {
     protected $table = 'transacciones';
     protected $primaryKey = 'id';
-    protected $fillable = [];
+    protected $fillable = [
+        'numero_cuenta', 
+        'codigo_transaccion', 
+        'nombre_transaccion', 
+        'monto_transaccion', 
+        'comentarios_transaccio', 
+        'sucursal_transaccion', 
+        'colaborador_transaccion'
+    ];
 
     public function cuentaBancaria(){
         return $this->belongsTo('App\CuentasBancaria', 'numero_cuenta', 'id');
