@@ -33,7 +33,10 @@ class DepositosController extends Controller
         
         if($cuentaBancaria){
             Transaccion::create($data);
-            return redirect('/')->with('flash_message_success', 'Deposito hecho correctamente');
+            return redirect('/')->with('flash_message_success', 'Depósito hecho correctamente');
+        }else{
+            return redirect('/')->with('flash_message_error', 'Error al crear depósito');
+
         }
     }
 }

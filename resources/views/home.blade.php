@@ -21,6 +21,9 @@
             @if ($message = Session::get('flash_message_success'))
                 toastr.success('{{ $message }}');
             @endif
+            @if ($message = Session::get('flash_message_error'))
+                toastr.error('{{ $message }}');
+            @endif
         });
     </script>
 @endsection
