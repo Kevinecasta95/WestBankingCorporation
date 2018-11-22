@@ -24,5 +24,5 @@
     {!! $errors->first('sucursal_transaccion', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group">
-    <input class="btn btn-primary" type="submit" value="Generar deposito">
+    <input class="btn btn-primary" type="submit" value="Generar depósito">
 </div>
