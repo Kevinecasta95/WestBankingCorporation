@@ -33,6 +33,7 @@
                                         <th>Codigo Usuario</th>
                                         <th>Nombre Usuario</th>
                                         <th>Tipo Cuenta</th>
+                                        <th>Monto total de la cuenta</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -52,6 +53,7 @@
                                                 Cuenta de cheques - C01
                                             @endif
                                         </td>
+                                        <td>Q. {{ $item->monto_cuenta}}</td>
                                         <td>
                                             <a href="{{ url('/cuentas_bancarias' . '/' . $item->id) }}"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Ver</button></a>
                                             <a href="{{ url('/cuentas_bancarias' . '/' . $item->id . '/edit') }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>

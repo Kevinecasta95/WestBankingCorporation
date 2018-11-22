@@ -48,6 +48,10 @@
                                             @endif
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th> Monto total de la cuenta </th>
+                                        <td> Q. {{ $cuentasbancaria->monto_cuenta}} </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
