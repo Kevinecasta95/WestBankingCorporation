@@ -38,11 +38,11 @@ class HomeController extends Controller
         $data = $transacciones->groupBy('sucursal_transaccion')->map(function ($item, $key) {
             return $item->count();
         })->sort()->reverse()->take(5);
-        $chart = new Top5Agencias;
-        $chart->labels($data->keys());
-        $chart->dataset('Top 5 Agencias', 'column', $data->values());
 
-        return $chart;
+        $chart = new Top5Agencias;
+
+        return $chart->labels($data->keys())
+            ->dataset('Top 5 sgencias', 'column', $data->values());
     }
 
     protected function chartTop5Operarios(){
@@ -54,10 +54,10 @@ class HomeController extends Controller
         $data = $data->map(function ($item, $key) {
             return $item->count();
         })->sort()->reverse()->take(5);
-        $chart = new Top5Operarios;
-        $chart->labels($data->keys());
-        $chart->dataset('Top 5 operarios', 'column', $data->values());
 
-        return $chart;
+        $chart = new Top5Operarios;
+        
+        return $chart->labels($data->keys())
+            ->dataset('Top 5 operarios', 'column', $data->values());
     }
 }
