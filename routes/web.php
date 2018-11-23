@@ -19,3 +19,4 @@ Route::resource('clientes', 'Clientes\\ClientesController')->middleware('auth');
 Route::resource('cuentas_bancarias', 'CuentasBancarias\\CuentasBancariasController')->middleware('auth');
 Route::resource('transacciones', 'Transacciones\\TransaccionesController')->middleware('auth')->except(['create', 'store', 'edit', 'update', 'delete']);
 Route::resource('depositos', 'Depositos\\DepositosController')->middleware('auth');
+Route::resource('retiros', 'Retiros\\RetirosController')->middleware('auth');

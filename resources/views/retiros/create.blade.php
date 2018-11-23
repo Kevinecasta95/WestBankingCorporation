@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header">Generar depósito</div>
+                    <div class="card-header">Generar retiro</div>
                     <div class="card-body">
                             <a href="{{ url('/') }}"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar</button></a>
                         <br />
@@ -18,10 +18,10 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ url('/depositos') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/retiros') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
-                            @include ('common.formTransaccion', [$cuentasBancarias, 'text' => 'Generer depósito', 'type' => 'depósito'])
+                            @include ('common.formTransaccion', [$cuentasBancarias, 'text' => 'Generer retiro', 'type' => 'retiro'])
 
                         </form>
 

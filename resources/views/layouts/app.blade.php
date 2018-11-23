@@ -52,11 +52,11 @@
                                     <a class="dropdown-item" href="{{ route('depositos.create' )}}">
                                         Depósitos
                                     </a>
-                                    <a class="dropdown-item" href="#">
-                                        Cheques
+                                    <a class="dropdown-item" href="{{route('retiros.create')}}">
+                                        Retiros
                                     </a>
                                     <a class="dropdown-item" href="#">
-                                        Retiros
+                                        Cheques
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         Remesas
