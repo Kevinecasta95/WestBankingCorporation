@@ -21,7 +21,7 @@
                         <form method="POST" action="{{ url('/retiros') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
-                            @include ('common.formTransaccion', [$cuentasBancarias, 'text' => 'Generer retiro', 'type' => 'retiro'])
+                            @include ('common.formTransaccion', [$cuentasBancarias, 'text' => 'Generar retiro', 'type' => 'retiro'])
 
                         </form>
 

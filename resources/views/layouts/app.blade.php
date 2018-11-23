@@ -55,7 +55,7 @@
                                     <a class="dropdown-item" href="{{route('retiros.create')}}">
                                         Retiros
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('cheques.create')}}">
                                         Cheques
                                     </a>
                                     <a class="dropdown-item" href="#">
