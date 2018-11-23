@@ -26,4 +26,8 @@ class Transaccion extends Model
         return $this->belongsTo('App\User', 'colaborador_transaccion', 'id');
     }
 
+    public function documentos(){
+        return $this->hasMany('App\Documento', 'id', 'documento_transaccion');
+    }
+
 }

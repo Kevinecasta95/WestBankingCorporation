@@ -27,12 +27,21 @@ class DepositosController extends Controller
         $data['nombre_transaccion'] = 'Depósito';
         $data['colaborador_transaccion'] = Auth::user()->id;
 
+        $montoTransaccion = (int)$data['monto_transaccion'];
+
         $cuentaBancaria = CuentasBancaria::find($data['numero_cuenta']);
-        $cuentaBancaria->monto_cuenta += (int)$data['monto_transaccion'];
+        $cuentaBancaria->monto_cuenta += $montoTransaccion;
         $cuentaBancaria->save();
         
         if($cuentaBancaria){
-            Transaccion::create($data);
+            $transaccion = Transaccion::create($data);
+            if($montoTransaccion >= 55000){
+                $documento = Documento::create([
+                    'documento_cuenta' => $cuentaBancaria->id,
+                    'documento_transaccion' => $transaccion->id,
+                    'documento_tipo' => 2907
+                ]);
+            }
             return redirect('/')->with('flash_message_success', 'Depósito hecho correctamente');
         }else{
             return redirect('/')->with('flash_message_error', 'Error al crear depósito');
